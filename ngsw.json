@@ -1,0 +1,142 @@
+{
+  "configVersion": 1,
+  "timestamp": 1793192695191,
+  "index": "https://revtestaccount.github.io/investment-account-documentation/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://revtestaccount.github.io/investment-account-documentation/chunk-2FBVE3NE.js",
+        "https://revtestaccount.github.io/investment-account-documentation/chunk-2L2VC2QX.js",
+        "https://revtestaccount.github.io/investment-account-documentation/chunk-JG5SEJY4.js",
+        "https://revtestaccount.github.io/investment-account-documentation/chunk-OWE4KPSC.js",
+        "https://revtestaccount.github.io/investment-account-documentation/chunk-PDRMXDEL.js",
+        "https://revtestaccount.github.io/investment-account-documentation/favicon.png",
+        "https://revtestaccount.github.io/investment-account-documentation/index.html",
+        "https://revtestaccount.github.io/investment-account-documentation/main-XJNZV4O6.js",
+        "https://revtestaccount.github.io/investment-account-documentation/polyfills-5CFQRCPP.js",
+        "https://revtestaccount.github.io/investment-account-documentation/styles-NHLT2E6D.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/angular-cookie-law.min.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/foundation.min.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/myDocs.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/site.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/vendor.min.css",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/fira.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/eot/FiraSans-Light.eot",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/ttf/FiraSans-Light.ttf",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/ttf/FiraSans-Medium.ttf",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraMono-Regular.woff",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Bold.woff",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Medium.woff",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Regular.woff",
+        "https://revtestaccount.github.io/investment-account-documentation/web-resources/revenue-Logo-white.png"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "documents",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://revtestaccount.github.io/investment-account-documentation/PIT/Conformance Test Scenarios - Connectivity Testing.pdf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "documentation-data",
+      "patterns": [
+        "\\/web-resources\\/data\\.json",
+        "\\/web-resources\\/restconfigdata\\.json"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 86400000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    },
+    {
+      "name": "api-content",
+      "patterns": [
+        "\\/api\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 3600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "https://revtestaccount.github.io/investment-account-documentation/PIT/Conformance Test Scenarios - Connectivity Testing.pdf": "16baf1f77efe6a9337e1d649f8ac9fbbd1612953",
+    "https://revtestaccount.github.io/investment-account-documentation/chunk-2FBVE3NE.js": "7caea77044e7d948086aff351dae33bce5a3b702",
+    "https://revtestaccount.github.io/investment-account-documentation/chunk-2L2VC2QX.js": "161ab85fbeb300fa17df88e7563843c97f968554",
+    "https://revtestaccount.github.io/investment-account-documentation/chunk-JG5SEJY4.js": "b1589c4c6652f72a3df7755c3ef2e4fb26ff8bf7",
+    "https://revtestaccount.github.io/investment-account-documentation/chunk-OWE4KPSC.js": "34827e66074f60c4678dbc77e18ba3e5128e960d",
+    "https://revtestaccount.github.io/investment-account-documentation/chunk-PDRMXDEL.js": "726ca4844adcb475991ef3965c7e69b038133f1c",
+    "https://revtestaccount.github.io/investment-account-documentation/favicon.png": "9f2c4d67ba7fd06cf20dae02636f014a3ba03e2c",
+    "https://revtestaccount.github.io/investment-account-documentation/index.html": "90620f203003d556f9de890067ac1926dc24e52f",
+    "https://revtestaccount.github.io/investment-account-documentation/main-XJNZV4O6.js": "372007498404b5c3d7c5fd273fd6805c85ccf803",
+    "https://revtestaccount.github.io/investment-account-documentation/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
+    "https://revtestaccount.github.io/investment-account-documentation/styles-NHLT2E6D.css": "42ec88b074059f9bda4cbc5bebc73b669b0a0c3e",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/angular-cookie-law.min.css": "4f86ef0144d5d92f21411d3d767fdc2a464484dc",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/foundation.min.css": "bb3154cfffed82694ce635d8cd8d33d98e233d91",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/myDocs.css": "10bc781f2891a6e582584a53c1db5b88f5746801",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/site.css": "d5fa6f70a834a5755f59aa817e456fa7d7993d91",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/css/vendor.min.css": "2753b4fd6333348f689b2a0917e19471e360b7aa",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/eot/FiraSans-Light.eot": "4297097641a0cbb2db783a97bea4adea46644cad",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/fira.css": "ae5e8db02f92530ae4fd6bd0a937bea31f64fa59",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/ttf/FiraSans-Light.ttf": "1961fadbf5e06fe62139000a595f83eb9e6c0bd2",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/ttf/FiraSans-Medium.ttf": "333523eb9d8f5a507efd0195d56a5665923199b6",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraMono-Regular.woff": "4ee1b0356eac96f44b48a5ecc36584c4c81e33bd",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Bold.woff": "113937c72bf060e74d7eab67cbac99bed57851f9",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Medium.woff": "d44dca97abb2bd6be5d95eaadb742e59439c42cd",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/fonts/Fira/woff/FiraSans-Regular.woff": "f8bbc899989fc50fe9c1c1e99aac46cb924dc827",
+    "https://revtestaccount.github.io/investment-account-documentation/web-resources/revenue-Logo-white.png": "a3200fd3994c993a19b36679d81f4f768ed36693"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

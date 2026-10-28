@@ -1,0 +1,320 @@
+{
+  "title": "REST Web Service Integration Guide",
+  "subtitle": "Investment Account Web Services - PIT Current Version",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "menuTitle": "Introduction",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>This guide describes how to integrate with the Investment Account REST web services. It is intended for software developers who are building applications that consume these services in the Public Interface Testing (PIT) environment and, subsequently, the live environment.</p><p>The REST web services accept and return JSON payloads over HTTPS. All requests must be authenticated and signed as described in the <a href=\"#digital-signatures\">Digital Signatures</a> section. Before integrating, developers should review the overview of available endpoints in <a href=\"#calling-the-services\">Calling the Services</a>.</p>"
+        }
+      ]
+    },
+    {
+      "id": "version-history",
+      "title": "Version History",
+      "menuTitle": "Version History",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>The following table lists the changes made to this guide across versions.</p>"
+        },
+        {
+          "type": "table",
+          "columns": [
+            { "key": "version", "label": "Version Number" },
+            { "key": "changeDate", "label": "Change Date" },
+            { "key": "section", "label": "Section" },
+            { "key": "description", "label": "Change Description" }
+          ],
+          "rows": [
+            {
+              "version": "1.0",
+              "changeDate": "15/01/2026",
+              "section": "All",
+              "description": "Initial publication of the REST Web Service Integration Guide."
+            },
+            {
+              "version": "1.1",
+              "changeDate": "22/03/2026",
+              "section": "Digital Signatures",
+              "description": "Added HTTP signature sample and clarified signature string construction."
+            },
+            {
+              "version": "1.2",
+              "changeDate": "05/06/2026",
+              "section": "Calling the Services",
+              "description": "Added the Eligibility Checks web service and updated endpoint summary table."
+            },
+            {
+              "version": "1.3",
+              "changeDate": "19/09/2026",
+              "section": "Interpreting the Responses",
+              "description": "Expanded validation error guidance and added example responses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calling-the-services",
+      "title": "Calling the Services",
+      "menuTitle": "Calling the Services",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>This section describes how to call the Investment Account REST web services, including the available endpoints and how to interpret the responses returned by each service.</p>"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "rest-endpoints",
+          "title": "REST Endpoints",
+          "menuTitle": "REST Endpoints",
+          "blocks": [
+            {
+              "type": "text",
+              "html": "<p>The table below summarises all REST endpoints exposed by the Investment Account web services.</p>"
+            },
+            {
+              "type": "table",
+              "columns": [
+                { "key": "description", "label": "Description" },
+                { "key": "method", "label": "HTTP Method" },
+                { "key": "url", "label": "Endpoint URL" },
+                { "key": "additionalInfo", "label": "Additional Information" },
+                { "key": "links", "label": "Links" }
+              ],
+              "rows": [
+                {
+                  "description": "Handshake",
+                  "method": "POST",
+                  "url": "/investment-account/v1/handshake",
+                  "additionalInfo": "Establishes connectivity and verifies the digital certificate.",
+                  "links": "<a href=\"#handshake-web-service\">Handshake Web Service</a>"
+                },
+                {
+                  "description": "Create Account",
+                  "method": "POST",
+                  "url": "/investment-account/v1/accounts",
+                  "additionalInfo": "Creates a new investment account.",
+                  "links": "<a href=\"#create-account-web-service\">Create Account Web Service</a>"
+                },
+                {
+                  "description": "Close Account",
+                  "method": "POST",
+                  "url": "/investment-account/v1/accounts/{accountId}/close",
+                  "additionalInfo": "Closes an existing investment account.",
+                  "links": "<a href=\"#close-account-web-service\">Close Account Web Service</a>"
+                },
+                {
+                  "description": "Transfer Account",
+                  "method": "POST",
+                  "url": "/investment-account/v1/accounts/{accountId}/transfer",
+                  "additionalInfo": "Transfers an account between providers.",
+                  "links": "<a href=\"#transfer-account-web-service\">Transfer Account Web Service</a>"
+                },
+                {
+                  "description": "Eligibility Checks",
+                  "method": "GET",
+                  "url": "/investment-account/v1/eligibility",
+                  "additionalInfo": "Checks eligibility before account creation.",
+                  "links": "<a href=\"#eligibility-checks-web-service\">Eligibility Checks Web Service</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "digital-signatures-calling",
+          "title": "Digital Signatures",
+          "menuTitle": "Digital Signatures",
+          "blocks": [
+            {
+              "type": "text",
+              "html": "<p>Every request to the REST web services must include a digital signature. The signature proves the identity of the caller and ensures the integrity of the message. Full details of how signatures are constructed are provided in the <a href=\"#digital-signatures\">Digital Signatures</a> section of this guide.</p>"
+            }
+          ]
+        },
+        {
+          "id": "interpreting-the-responses",
+          "title": "Interpreting the Responses",
+          "menuTitle": "Interpreting the Responses",
+          "blocks": [
+            {
+              "type": "text",
+              "html": "<p>Responses are returned as JSON. Successful responses use standard HTTP 2xx status codes; errors use 4xx and 5xx codes with a structured error body. The following sub-sections describe the responses for each web service.</p>"
+            }
+          ],
+          "subsections": [
+            {
+              "id": "validation-errors",
+              "title": "Validation Errors",
+              "menuTitle": "Validation Errors",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>Validation errors are returned with an HTTP 400 status code. The response body contains a list of errors, each with a code, a target field, and a human-readable message. Clients should surface these messages to the user and allow the request to be corrected and resubmitted.</p>"
+                }
+              ]
+            },
+            {
+              "id": "handshake-web-service",
+              "title": "Handshake Web Service",
+              "menuTitle": "Handshake Web Service",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The handshake web service is used to verify connectivity and authentication before calling any business services. A successful handshake returns an HTTP 200 status code and an acknowledgement payload.</p>"
+                }
+              ]
+            },
+            {
+              "id": "create-account-web-service",
+              "title": "Create Account Web Service",
+              "menuTitle": "Create Account Web Service",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The create account web service returns an HTTP 201 status code on success, along with the identifier of the newly created investment account. Validation failures are returned as described under Validation Errors.</p>"
+                }
+              ]
+            },
+            {
+              "id": "close-account-web-service",
+              "title": "Close Account Web Service",
+              "menuTitle": "Close Account Web Service",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The close account web service returns an HTTP 200 status code on success. If the account cannot be closed (for example, because it has a pending transfer), a business error is returned.</p>"
+                }
+              ]
+            },
+            {
+              "id": "transfer-account-web-service",
+              "title": "Transfer Account Web Service",
+              "menuTitle": "Transfer Account Web Service",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The transfer account web service initiates the transfer of an investment account between providers. It returns an HTTP 202 status code to indicate that the transfer has been accepted for processing.</p>"
+                }
+              ]
+            },
+            {
+              "id": "eligibility-checks-web-service",
+              "title": "Eligibility Checks Web Service",
+              "menuTitle": "Eligibility Checks Web Service",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The eligibility checks web service returns an HTTP 200 status code and an eligibility decision. This service should be called prior to creating an account to confirm the applicant meets the required criteria.</p>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital-signatures",
+      "title": "Digital Signatures",
+      "menuTitle": "Digital Signatures",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>All requests must be signed using HTTP Signatures. This section describes how to build and attach a valid signature to a request.</p>"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "http-signatures",
+          "title": "HTTP Signatures",
+          "menuTitle": "HTTP Signatures",
+          "blocks": [
+            {
+              "type": "text",
+              "html": "<p>HTTP Signatures are added to requests using the <code>Signature</code> HTTP header. The signature covers a defined set of request components so that the server can verify both the identity of the caller and that the request has not been tampered with in transit.</p>"
+            }
+          ],
+          "subsections": [
+            {
+              "id": "http-signature-sample",
+              "title": "HTTP Signature Sample",
+              "menuTitle": "HTTP Signature Sample",
+              "blocks": [
+                {
+                  "type": "code",
+                  "html": "Signature: keyId=\"Test\",algorithm=\"rsa-sha256\",\n  headers=\"(request-target) host date digest\",\n  signature=\"Base64(RSA-SHA256(signing string))\""
+                }
+              ]
+            },
+            {
+              "id": "http-signature-components",
+              "title": "HTTP Signature Components",
+              "menuTitle": "HTTP Signature Components",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The signature is made up of the following components: <code>keyId</code>, <code>algorithm</code>, <code>headers</code>, and <code>signature</code>. The <code>headers</code> component lists, in order, the request fields that are included in the signing string.</p>"
+                }
+              ]
+            },
+            {
+              "id": "signature-string-construction",
+              "title": "Signature String Construction",
+              "menuTitle": "Signature String Construction",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>The signing string is constructed by concatenating each listed header name and its value, separated by a colon and a space, with each pair on a new line. The order of the headers must match the order declared in the <code>headers</code> component.</p>"
+                }
+              ]
+            },
+            {
+              "id": "signature-creation",
+              "title": "Signature Creation",
+              "menuTitle": "Signature Creation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "html": "<p>Once the signing string has been constructed, it is signed with the caller's private key using the declared algorithm (for example, <code>rsa-sha256</code>). The resulting signature is Base64 encoded and placed in the <code>signature</code> component of the <code>Signature</code> header.</p>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "example-messages",
+      "title": "Example Messages",
+      "menuTitle": "Example Messages",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>The following example shows a representative request and response for the Create Account web service. Full example message sets are provided separately with the web service examples.</p>"
+        },
+        {
+          "type": "code",
+          "html": "POST /investment-account/v1/accounts HTTP/1.1\nHost: softwaretest.ros.ie\nContent-Type: application/json\nSignature: keyId=\"Test\",algorithm=\"rsa-sha256\",headers=\"(request-target) host date digest\",signature=\"...\"\n\n{\n  \"applicant\": { \"ppsn\": \"1234567T\" },\n  \"product\": \"INVESTMENT_ACCOUNT\"\n}"
+        }
+      ]
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "menuTitle": "Appendix",
+      "blocks": [
+        {
+          "type": "text",
+          "html": "<p>This appendix contains supplementary reference material, including a glossary of terms and links to related documentation. Additional reference content will be added in future revisions of this guide.</p>"
+        }
+      ]
+    }
+  ]
+}

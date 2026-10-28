@@ -1,0 +1,127 @@
+{
+  "PIT": {
+    "title": "Public Interface Testing – Guides and useful info",
+    "anchor": "PIT",
+    "cardText": "<p>This section provides documentation which advises users on:</p><ul><li>How to register for access to the Public Interface Testing (PIT) environment for the Investment Account web services</li><li>How to raise queries or issues arising from either PIT or in relation to our published technical documentation.</li><li>Supported conformance test scenarios which can be executed in the PIT environment.</li></ul>",
+    "class": "section-title",
+    "cards": [
+      {
+        "link": "PIT/Conformance Test Scenarios - Connectivity Testing.pdf",
+        "description": "Conformance Test Scenarios - Connectivity Testing",
+        "anchor": "Conformance_Test_Scenarios",
+        "type": "PDF",
+        "environment": "All Versions",
+        "dateLastUpdated": "19/06/2026",
+        "category": "download"
+      },
+      {
+        "link": "PIT/Conformance Test Scenarios - Connectivity Testing.html",
+        "description": "Conformance Test Scenarios - Connectivity Testing HTML",
+        "anchor": "Conformance_Test_Scenarios",
+        "type": "PDF",
+        "environment": "All Versions",
+        "dateLastUpdated": "19/06/2026",
+        "category": "download"
+      },
+      {
+        "link": "https://revenuehelpdesk.canfigure.net/portal/revenueie/register.html",
+        "description": "Help Desk Registration",
+        "anchor": "Help_Desk_Registration",
+        "type": "LINK",
+        "environment": "All Versions",
+        "dateLastUpdated": "16/03/2026",
+        "category": "LINK"
+      },
+      {
+        "link": "https://revenuehelpdesk.canfigure.net/login.php",
+        "description": "Help Desk Login",
+        "anchor": "Help_Desk_Login",
+        "type": "LINK",
+        "environment": "All Versions",
+        "dateLastUpdated": "16/03/2026",
+        "category": "LINK"
+      }
+    ]
+  },
+  "rest-pit3": {
+    "title": "Investment Account Web Service Specifications PIT Current Version (REST/JSON)",
+    "anchor": "rest",
+    "class": "section-title",
+    "cards": [
+      {
+        "link": "PIT3/rest/investment-account-rest-api-pit3.json",
+        "description": "REST Open API Specification",
+        "anchor": "REST_API_Spec",
+        "type": "API File",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "22/04/2026",
+        "category": "download"
+      },
+      {
+        "link": "PIT3/rest/investment-account-rest-api-pit3.html",
+        "description": "REST API Reference",
+        "anchor": "REST_API_Ref",
+        "type": "Link",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "06/12/2026",
+        "category": "navigation"
+      },
+      {
+        "link": "/restguide",
+        "description": "REST Web Service Integration Guide",
+        "anchor": "REST_Integration_Guide",
+        "type": "LINK",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "05/03/2026",
+        "category": "navigation"
+      }
+    ]
+  },
+  "examples-pit3": {
+    "title": "Investment Account Web Service Examples PIT Current Version",
+    "anchor": "examples",
+    "class": "section-title",
+    "cards": [
+      {
+        "link": "PIT3/examples/Overview of Web Service Examples.pdf",
+        "description": "Description Of Web Service Examples",
+        "anchor": "Overview_Of_Web_Service_Examples",
+        "type": "PDF",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "02/03/2026",
+        "category": "download"
+      },
+      {
+        "link": "PIT3/examples/Example_1_Full_Life_Cycle.zip",
+        "description": "Example 1: Full Investment Account Life Cycle",
+        "anchor": "Example_1",
+        "type": "ZIP File",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "24/05/2026",
+        "category": "download"
+      },
+      {
+        "link": "PIT3/Scenarios/XML.zip",
+        "description": "Investment Account Scenarios - XML",
+        "explainer": "This ZIP file contains diverse XML examples outlined in the scenarios document.",
+        "explainerIndex": "1",
+        "anchor": "Scenarios_XML",
+        "type": "ZIP File",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "15/10/2026",
+        "category": "download"
+      },
+      {
+        "link": "PIT3/Scenarios/JSON.zip",
+        "description": "Investment Account Scenarios - JSON",
+        "explainer": "This ZIP file contains diverse JSON examples outlined in the scenarios document.",
+        "explainerIndex": "2",
+        "anchor": "Scenarios_JSON",
+        "type": "ZIP File",
+        "environment": "PIT Current Version",
+        "dateLastUpdated": "15/10/2026",
+        "category": "download"
+      }
+    ]
+  }
+}
