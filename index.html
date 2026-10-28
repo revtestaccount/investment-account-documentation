@@ -5,6 +5,30 @@
   <title>InvestmentAccountDocumentation</title>
   <base href="/investment-account-documentation/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    GitHub Pages SPA redirect restore.
+    When a deep link (e.g. /investment-account-documentation/restguide) is
+    requested directly, GitHub Pages serves 404.html, which encodes the path
+    into a query string and redirects to index.html. This snippet decodes that
+    query string back into the real URL (using history.replaceState) BEFORE the
+    Angular router reads location, so the router matches the correct route
+    instead of falling through to the wildcard not-found route.
+    Based on the spa-github-pages technique (https://github.com/rafgraph/spa-github-pages).
+  -->
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search
+          .slice(1)
+          .split('&')
+          .map(function (s) {
+            return s.replace(/~and~/g, '&');
+          })
+          .join('?');
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+      }
+    })(window.location);
+  </script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="./web-resources/fonts/Fira/fira.css" rel="stylesheet">
   <link href="./web-resources/css/foundation.min.css" rel="stylesheet">
@@ -14,5 +38,5 @@
 <link rel="stylesheet" href="styles-NHLT2E6D.css"></head>
 <body>
   <app-root></app-root>
-<link rel="modulepreload" href="chunk-JG5SEJY4.js"><link rel="modulepreload" href="chunk-PDRMXDEL.js"><script src="polyfills-5CFQRCPP.js" type="module"></script><script src="main-XJNZV4O6.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-JG5SEJY4.js"><link rel="modulepreload" href="chunk-PDRMXDEL.js"><script src="polyfills-5CFQRCPP.js" type="module"></script><script src="main-3HS3HWGA.js" type="module"></script></body>
 </html>

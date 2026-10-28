@@ -67,7 +67,7 @@
         "category": "navigation"
       },
       {
-        "link": "/restguide",
+        "link": "restguide",
         "description": "REST Web Service Integration Guide",
         "anchor": "REST_Integration_Guide",
         "type": "LINK",
