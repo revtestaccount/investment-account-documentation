@@ -4,6 +4,7 @@
     "anchor": "PIT",
     "cardText": "<p>This section provides documentation which advises users on:</p><ul><li>How to register for access to the Public Interface Testing (PIT) environment for the Investment Account web services</li><li>How to raise queries or issues arising from either PIT or in relation to our published technical documentation.</li><li>Supported conformance test scenarios which can be executed in the PIT environment.</li></ul>",
     "class": "section-title",
+    "hidden": true,
     "cards": [
       {
         "link": "PIT/Conformance Test Scenarios - Connectivity Testing.pdf",
