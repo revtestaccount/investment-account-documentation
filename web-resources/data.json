@@ -88,5 +88,30 @@
         "category": "download"
       }
     ]
+  },
+  "forum-slides": {
+    "title": "Investment Account Technical Forum Documentation",
+    "anchor": "forum",
+    "class": "section-title",
+    "cards": [
+      {
+        "link": "Forum/slides/Investment Account Forum Meeting 1 Slides.pdf",
+        "description": "Forum 1 presentation slides",
+        "anchor": "Forum 1 Presentation",
+        "type": "PDF",
+        "environment": "All Versions",
+        "dateLastUpdated": "11/11/2026",
+        "category": "download"
+      },
+      {
+        "link": "Forum/slides/Investment Account Forum Meeting 2 Slides.pdf",
+        "description": "Forum 2 presentation slides",
+        "anchor": "Forum 2 Presentation",
+        "type": "PDF",
+        "environment": "All Versions",
+        "dateLastUpdated": "11/11/2026",
+        "category": "download"
+      }
+    ]
   }
 }

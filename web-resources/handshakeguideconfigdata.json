@@ -229,7 +229,7 @@
                     { "col1": "<span class=\"marker-asterisk\">***</span> digest", "col2": "Yes, if HTTP method is of type POST" },
                     { "col1": "<span class=\"marker-asterisk\">****</span> content-type", "col2": "No" },
                     { "col1": "content-length", "col2": "No" },
-                    { "col1": "x-http-method-override", "col2": "If HTTP method is of type POST, HTTP header \u2018X-HTTP-Method-Override\u2019 exists and \u2018Content-Type=application/x-www-form-urlencoded\u2019." }
+                    { "col1": "x-http-method-override", "col2": "If HTTP method is of type POST, HTTP header \u2018X-HTTP-Method-Override\u2019 exists and \u2018Content-Type=application/x-www-form-urlencoded\u2019. See <a href=\"#\">Section 2.1.1</a> for more detail." }
                   ]
                 },
                 {
